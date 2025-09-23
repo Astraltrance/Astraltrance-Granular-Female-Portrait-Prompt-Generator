@@ -1,0 +1,119 @@
+{
+  "jewelry_metals": [
+    "gold",
+    "silver",
+    "rose gold",
+    "platinum",
+    "bronze",
+    "copper",
+    "brass",
+    "pewter",
+    "white gold",
+    "antique gold"
+  ],
+  "gemstone_colors": [
+    "diamond",
+    "ruby",
+    "sapphire",
+    "emerald",
+    "amethyst",
+    "topaz",
+    "opal",
+    "pearl",
+    "turquoise",
+    "garnet",
+    "citrine",
+    "aquamarine"
+  ],
+  "makeup_colors": [
+    "nude",
+    "pink",
+    "red",
+    "coral",
+    "berry",
+    "plum",
+    "brown",
+    "peach",
+    "rose",
+    "crimson",
+    "burgundy",
+    "mauve"
+  ],
+  "nail_colors": [
+    "clear",
+    "nude",
+    "pink",
+    "red",
+    "black",
+    "white",
+    "blue",
+    "purple",
+    "green",
+    "gold",
+    "silver",
+    "rainbow"
+  ],
+  "accessory_colors": [
+    "black",
+    "brown",
+    "tan",
+    "white",
+    "cream",
+    "red",
+    "blue",
+    "green",
+    "purple",
+    "pink",
+    "yellow",
+    "orange"
+  ],
+  "leather_tones": [
+    "black leather",
+    "brown leather",
+    "tan leather",
+    "cognac leather",
+    "burgundy leather",
+    "white leather",
+    "navy leather",
+    "oxblood leather",
+    "caramel leather",
+    "mahogany leather"
+  ],
+  "accent_finishes": [
+    "matte",
+    "glossy",
+    "metallic",
+    "shimmer",
+    "glitter",
+    "iridescent",
+    "satin",
+    "brushed",
+    "polished",
+    "antique"
+  ],
+  "color_intensities": [
+    "bright",
+    "bold",
+    "subtle",
+    "soft",
+    "vibrant",
+    "muted",
+    "deep",
+    "light",
+    "rich",
+    "delicate"
+  ],
+  "seasonal_accents": {
+    "spring": ["pastel", "fresh", "light", "blooming"],
+    "summer": ["bright", "vibrant", "tropical", "sunny"],
+    "autumn": ["warm", "earthy", "rich", "golden"],
+    "winter": ["jewel-toned", "metallic", "crystalline", "icy"]
+  },
+  "mood_colors": {
+    "elegant": ["gold", "silver", "pearl", "platinum"],
+    "playful": ["bright", "rainbow", "colorful", "fun"],
+    "dramatic": ["black", "red", "deep", "bold"],
+    "romantic": ["rose", "pink", "soft", "delicate"],
+    "edgy": ["black", "silver", "metallic", "dark"]
+  }
+}

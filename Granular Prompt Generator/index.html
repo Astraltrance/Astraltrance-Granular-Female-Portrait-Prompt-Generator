@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Granular Female Portrait Prompt Generator</title>
+    <meta
+      name="description"
+      content="Generate detailed, creative prompts for female portrait AI art with atomic data combinations and smart templates"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+
+
+    <!-- Critical Error Display -->
+
+
+    <!-- Main Application -->
+    <div class="app-container">
+      <!-- Header -->
+      <header class="app-header">
+        <div class="header-content">
+          <div class="header-left">
+            <h1 class="app-title">
+              <span class="title-icon">🎨</span>
+              Granular Portrait Generator
+            </h1>
+            <p class="app-subtitle">
+              Create detailed AI art prompts with atomic data combinations
+            </p>
+          </div>
+          <div class="header-right">
+<button id="historyBtn" class="btn btn-secondary" onclick="window.toggleHistory()">
+  📚 History <span id="historyCount" class="badge">0</span>
+</button>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <!-- Control Panel -->
+        <section class="control-panel">
+          <div class="panel-grid">
+            <!-- Template Selection -->
+            <div class="control-group">
+              <label for="templateSelector" class="control-title"
+                >Template Style</label
+              >
+              <select id="templateSelector" class="template-selector">
+                <option value="">Loading templates...</option>
+              </select>
+              <p id="templateDescription" class="template-description">
+                Select a template to see its description
+              </p>
+            </div>
+
+            <!-- Settings Controls -->
+            <div class="control-group">
+              <h3 class="control-title">Generation Settings</h3>
+
+              <!-- Accessory Frequency -->
+              <div class="setting-item">
+                <label for="accessoryFrequency" class="setting-label">
+                  Accessory Frequency:
+                  <span id="accessoryLabel" class="setting-value">50%</span>
+                </label>
+                <input
+                  type="range"
+                  id="accessoryFrequency"
+                  class="slider"
+                  min="0"
+                  max="1"
+                  step="0.1"
+                  value="0.5"
+                />
+                <div class="slider-labels">
+                  <span>Minimal</span>
+                  <span>Maximum</span>
+                </div>
+              </div>
+
+              <!-- Color Creativity -->
+              <div class="setting-item">
+                <label for="colorCreativity" class="setting-label">
+                  Color Creativity:
+                  <span id="colorLabel" class="setting-value">50%</span>
+                </label>
+                <input
+                  type="range"
+                  id="colorCreativity"
+                  class="slider"
+                  min="0"
+                  max="1"
+                  step="0.1"
+                  value="0.5"
+                />
+                <div class="slider-labels">
+                  <span>Conservative</span>
+                  <span>Wild</span>
+                </div>
+              </div>
+
+              <!-- Include Options -->
+              <div class="checkbox-group">
+                <label class="checkbox-item">
+                  <input type="checkbox" id="includeCamera" checked />
+                  <span class="checkmark"></span>
+                  Include Camera Details
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" id="includeLighting" checked />
+                  <span class="checkmark"></span>
+                  Include Lighting Details
+                </label>
+              </div>
+            </div>
+
+            <!-- Generation Controls -->
+            <div class="control-group">
+              <h3 class="control-title">Actions</h3>
+              <div class="button-group">
+                <button
+                  id="generateBtn"
+                  class="btn btn-primary btn-large"
+                  disabled
+                >
+                  🎯 Generate Prompt
+                </button>
+                <button id="regenerateBtn" class="btn btn-secondary" disabled>
+                  🔄 Regenerate
+                </button>
+                <button id="copyBtn" class="btn btn-accent" disabled>
+                  📋 Copy
+                </button>
+              </div>
+              <div class="keyboard-hints">
+                <span class="hint">Ctrl+G: Generate</span>
+                <span class="hint">Ctrl+C: Copy</span>
+                <span class="hint">Ctrl+H: History</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Output Section -->
+        <section class="output-section">
+          <div class="output-header">
+            <h2 class="output-title">Generated Prompt</h2>
+            <div class="output-actions">
+              <button id="exportBtn" class="btn btn-outline">
+                💾 Export History
+              </button>
+            </div>
+          </div>
+
+          <!-- Prompt Display -->
+          <div id="promptOutput" class="prompt-output">
+            <div class="prompt-placeholder">
+              <div class="placeholder-icon">✨</div>
+              <h3>Ready to Create!</h3>
+              <p>
+                Select a template and click "Generate Prompt" to create your
+                first detailed AI art prompt.
+              </p>
+              <div class="feature-highlights">
+                <div class="feature">🎨 8 Specialized Templates</div>
+                <div class="feature">🧬 Atomic Data Combinations</div>
+                <div class="feature">🎯 Smart Color Coordination</div>
+                <div class="feature">🌍 Cultural Mixing Freedom</div>
+              </div>
+            </div>
+          </div>
+          
+        </section>
+      </main>
+
+      <!-- History Panel (Slide-out) -->
+      <aside id="historyPanel" class="history-panel">
+        <div class="history-header">
+          <h3>Prompt History</h3>
+          <div class="history-actions">
+            <button id="clearHistoryBtn" class="btn btn-small btn-danger">
+              Clear All
+            </button>
+            <button
+              class="btn btn-small"
+              onclick="document.getElementById('historyPanel').classList.remove('visible')"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+        <div id="historyList" class="history-list">
+          <div class="history-empty">
+            <p>No prompts generated yet.</p>
+            <p>Start creating to build your history!</p>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Footer -->
+      <footer class="app-footer">
+        <div class="footer-content">
+          <div class="footer-left">
+            <p>&copy; 2024 Granular Portrait Generator v1.0.0</p>
+            <p>Atomic data architecture for unlimited creative combinations</p>
+          </div>
+          <div class="footer-right">
+            <div class="system-status">
+              <span class="status-indicator" id="systemStatus">🟢</span>
+              <span class="status-text">System Ready</span>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>
