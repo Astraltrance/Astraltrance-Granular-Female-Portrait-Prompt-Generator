@@ -1,0 +1,20 @@
+{
+  "eye_shapes": [
+    "almond-shaped", "round", "upturned", "downturned", 
+    "hooded", "deep-set", "wide-set", "close-set"
+  ],
+  "eye_colors": [
+    "hazel", "brown", "dark brown", "amber", "green", 
+    "blue", "gray", "blue-gray", "green-gray", "violet"
+  ],
+  "gaze_directions": [
+    "gazing directly at camera",
+    "looking slightly away to the left",
+    "looking slightly away to the right",
+    "looking upward thoughtfully",
+    "glancing over shoulder",
+    "eyes closed peacefully",
+    "looking downward demurely",
+    "gazing into the distance"
+  ]
+}
